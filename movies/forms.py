@@ -5,10 +5,9 @@ from .models import Review, Rating, RatingStar
 # from captcha.fields import ReCaptchaField
 
 class ReviewForm(forms.ModelForm):
-    # captcha=ReCaptchaField()
     class Meta:
         model=Review
-        fields=("name", "email", "text", "captcha")
+        fields=("name", "email", "text")
         widgets={
             "name":forms.TextInput(attrs={"class":"form-control border"}),
             "email":forms.EmailInput(attrs={"class":"form-control border"}),
